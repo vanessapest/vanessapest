@@ -249,17 +249,29 @@ section {
     position: relative;
 }
 
+.education-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers {
+    display: flex; /* Flexbox-Layout verwenden */
+    justify-content: space-around; /* Abstand zwischen den .details-container hinzufügen */
+    flex-wrap: wrap; /* Inhalt umbrechen, wenn nicht genug Platz vorhanden ist */
+}
+
+.details-container {
+    flex: 1; /* Flexibel wachsen, um den verfügbaren Platz auszufüllen */
+    max-width: 30%; /* Maximale Breite der .details-container festlegen */
+    margin-bottom: 2rem; /* Abstand zwischen den .details-container hinzufügen */
+}
+
 .education-sub-title {
     color: #162114;
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
-}
-
-.education-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .article-container {
@@ -268,11 +280,15 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 article {
     display: flex;
+    flex: 1 1 300px;
+    flex-direction: column; /* Icons und Text untereinander anordnen */
+    align-items: center; /* Icons und Text zentrieren */
+    text-align: center; /* Text zentrieren */
     width: 10rem;
     justify-content: space-around;
     gap: 0.5rem;
