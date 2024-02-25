@@ -4,184 +4,84 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="mediaqueries.css"/>
-        <script src="script.js" defer async></script>
+        <link rel="stylesheet" href="stylesheet.css"/>
+        <script src="script.js"></script>
     </head>
     <body>
         <nav id="desktop-nav">
-            <div class="logo">Vanessa Pest</div>
             <div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="#projects" id="projects">Projects</a></li>
                 </ul>
             </div>
         </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Vanessa Pest</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()" >About</a></li>
-                    <li><a href="#education" onclick="toggleMenu()" >Education</a></li>
-                </div>
-            </div>
-        </nav>
         <section id="profile">
-            <div class="section_pic-container">
-                <img src="pics/1.jpg" alt="Vanessa Pest profile picture"/>
-            </div>
+            <img src="pics/Ribbon.jpg" alt="Hintergrundbild für Hero-Sektion">
             <div class="section_text">
-                <p class="section_text_p1">Welcome to my</p>
-                <h1 class="title">Portfolio</h1>
-                <p class="section_text_p2">International Media and Computing Undergrad</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('./documents/CV_VanessaPest.pdf')">Download CV</button>
-                    <button class="btn btn-color-1" onclick="location.href='mailto:Vanessa.Pest@Student.HTW-Berlin.de'">Contact Me</button>
-                </div>
+                <h1 class="title">Vanessa Pest</h1>
+            <p class="section_text_p1">Portfolio</p>
             </div>
         </section>
         <section id="about">
-            <p class="section_text_p1">Get To Know More</p>
+            <p class="section_text_p2">few words</p>
             <h1 class="title">About Me</h1>
             <div class="section-container">
-                <div class="section_pic-container">
-                    <img src="pics/4.jpg" alt="profile picture" class="about-pic"/>
-                </div>
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img src="pics/education.png" alt="Experience Icon" class="icon"/>
-                            <h3>Vanessa Pest</h3>
-                            <p>13.08.2003<br/>Berlin, Germany</p>
-                        </div>
-                        <div class="details-container">
-                            <img src="pics/education.png" alt="Education Icon" class="icon"/>
-                            <h3>Education</h3>
-                            <p>HTW Berlin - University of Applied Science<br/>since April 2023</p>
-                        </div>
-                    </div>
-                    <div class="text-container">
-                        <p>Currently in my third semester, where I am pursuing a degree in media and computing. I am known for having a strong work ethic and constantly aiming for academic success. Despite my natural shyness, I have the ability to take on leadership roles when necessary, showcasing great communication abilities and a talent for mentoring others. With my enthusiasm and dedication to my goals, I am optimistic that I will have a big influence on the media and computer industries.</p>
-                    </div>
-                </div>
-            </div>
-            <img src="pics/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#extra'"/>
-        </section>
-        <section id="extra">
-            <p class="section_text_p1">About</p>
-            <h1 class="title">Interests</h1>
-            <div class="section-container">
                 <div class="text-container">
-                    <p>Usually, you can catch me scribbling in my sketchbook. I've always loved drawing as a hobby. It's like having my own small therapy session where I can let my mind run wild and temporarily escape reality. Nonetheless, I really think that work and play should be balanced.  I enjoy taking well-planned vacations and relaxing trips. These trips let me explore my curiosity and offer priceless chances to see unfamiliar surroundings, build relationships with a wide range of people, and learn about different cultures.</p>
-                    <div class="block">
-                        <img src="pics/8.jpg" alt="Image 1"/>
+                    <p>Currently in my third semester at HTW Berlin - University of Applied Science, where I am pursuing a degree in media and computing. I am known for having a strong work ethic and constantly aiming for academic success. Despite my natural shyness, I have the ability to take on leadership roles when necessary, showcasing great communication abilities and a talent for mentoring others. With my enthusiasm and dedication to my goals, I am optimistic that I will have a big influence on the media and computer industries.</p>
+                    <div class="pic-container">
+                        <img src="pics/1.jpg" alt="Image 1"/>
                         <img src="pics/2.jpg" alt="Image 2"/>
                         <img src="pics/3.jpg" alt="Image 3"/>
-                        <img src="pics/10.jpg" alt="Image 4"/>
-                        <img src="pics/5.jpg" alt="Image 5"/>
+                        <img src="pics/4.jpg" alt="Image 4"/>
                     </div>
                 </div>
             </div>
-            <img src="pics/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#education'"/>
+            <div class="container">
+                <div class="image-container">
+                    <p class="open-image">Mood Board</p>
+                    <img src="pics/mood.jpg" alt="Moodboard" class="hidden-image">
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="image-container">
+                    <p class="open-image">Inspiration Board</p>
+                    <img src="pics/inspiration.jpg" alt="Inspiration Board" class="hidden-image">
+                </div>
+            </div>                      
+            <div class="nextpage">
+                <div class="nextpage-content">
+                    <li><a href="education.html">visit my next Page</a></li>
+                    <img src="pics/education.png" alt="education icon" class="education_icon" onclick="location.href='education.html'">
+                </div>
+            </div>            
         </section>
-        <section id="education">
-            <p class="section_text_p1">Explore My</p>
-            <h1 class="title">Education</h1>
-            <div class="education-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <h2 class="education-sub-title">Relevant Courses</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Informatics</h3>
-                                    <p>Java</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Web Development</h3>
-                                    <p>HTML/CSS</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Digital Media</h3>
-                                    <p>Java</p>
-                                </div>
-                            </article>
-                        </div>
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="footer-block">
+                    <div class="footer-item">
+                        <h2 class="footer-item-heading">Connect</h2>
+                        <ul class="footer-item-details">
+                            <li><a onclick="location.href='mailto:Vanessa.Pest@Student.HTW-Berlin.de'">Email</a></li>
+                            <li><a href="#LinkedIn">LinkedIn</a></li>
+                        </ul>
                     </div>
-                    <div class="details-container">
-                        <h2 class="education-sub-title">Skills</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Java</h3>
-                                    <p>Elementary</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>HTML/CSS</h3>
-                                    <p>Elementary</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>JavaScript</h3>
-                                    <p>Beginner</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Git</h3>
-                                    <p>Beginner</p>
-                                </div>
-                            </article>
-                        </div>
+                    <div class="footer-item">
+                        <h2 class="footer-item-heading">Info</h2>
+                        <ul class="footer-item-details">
+                            <li><a onclick="window.open('./documents/CV_VanessaPest.pdf')">CV</a></li>
+                        </ul>
                     </div>
-                    <div class="details-container">
-                        <h2 class="education-sub-title">Languages</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>German</h3>
-                                    <p>native</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>English</h3>
-                                    <p>advanced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="pics/education.png" alt="education-icon" class="icon"/>
-                                <div>
-                                    <h3>Vietnamese</h3>
-                                    <p>basic</p>
-                                </div>
-                            </article>
-                        </div>
+                    <div class="footer-item">
+                        <h2 class="footer-item-heading">Social</h2>
+                        <ul class="footer-item-details">
+                            <li><a href="https://pin.it/5lFuBmNCw">Pinterest</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     </body>
 </html>
