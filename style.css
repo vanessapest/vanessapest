@@ -65,11 +65,11 @@ section {
 
 #profile {
     display: flex;
-    flex-direction: column; /* Flexbox in Spaltenrichtung */
+    flex-direction: column;
     height: 80vh;
     padding-left: 8rem;
-    background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Hintergrund ausfüllt */
-    background-position: center; /* Das Bild wird horizontal und vertikal zentriert */
+    background-size: cover;
+    background-position: top; /* Position the background image at the top of the section */
     background-repeat: no-repeat;
 }
 
