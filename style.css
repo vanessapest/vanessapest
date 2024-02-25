@@ -33,6 +33,10 @@ nav {
     padding: 0; /* Entferne den Standardabstand von der Listenpunkte */
 }
 
+nav a {
+    outline: none;
+}
+
 a {
     color: #162114;
     text-decoration: none;
@@ -40,6 +44,7 @@ a {
 
 a:hover {
     color: #c38888;
+    border: none;
 }
 
 /* sections */
