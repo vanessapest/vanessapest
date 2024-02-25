@@ -159,29 +159,23 @@ section {
 }
 
 .open-image {
+    text-decoration: underline;
     cursor: pointer;
 }
 
 /* next Page Icon 'Education' */
 
-.education_icon {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-    width: 30px;
-    height: auto;
-    cursor: pointer;
-}
-
 .nextpage {
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
-    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Platzieren Sie den Inhalt am rechten Rand */
+    align-items: center; /* Zentrieren Sie den Inhalt vertikal */
+    margin-top: 2rem; /* Fügen Sie etwas Abstand zum vorherigen Inhalt hinzu */
 }
 
 .nextpage-content {
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center; /* Zentrieren Sie den Inhalt vertikal */
+    gap: 10px; /* Fügen Sie etwas Abstand zwischen den Elementen hinzu */
 }
 
 .nextpage-content li {
@@ -189,9 +183,15 @@ section {
 }
 
 .nextpage-content a {
-    text-decoration: none; /* Remove underline from the link */
-    color: #000; /* Change link color */
-    margin-right: 10px; /* Add some space between link and icon */
+    text-decoration: underline;
+    color: #000;
+    margin-right: 10px;
+}
+
+.education_icon {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
 }
 
 /* footer */
