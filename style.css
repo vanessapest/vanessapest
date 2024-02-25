@@ -51,7 +51,7 @@ a:hover {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
+    /* height: 96vh; */
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -91,7 +91,7 @@ section {
 .title {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .section_text_p1 {
@@ -198,7 +198,7 @@ section {
 
 #footer {
     position: relative;
-    padding-top: 25px;
+    padding-top: 1rem;
     padding-bottom: 25px;
 }
 
