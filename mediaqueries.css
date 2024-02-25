@@ -1,5 +1,50 @@
-@media screen and (max-width: 768px) {
-    article {
-        flex: 1 1 100%; /* Ändere die Breite der Artikelcontainer auf 100% */
+/* CSS für Bildschirme mit einer maximalen Breite von 768px (Tablets und kleinere Geräte) */
+@media only screen and (max-width: 768px) {
+    nav {
+        justify-content: center; /* Zentrieren Sie die Navigationslinks auf kleineren Bildschirmen */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Ändern Sie die Anordnung der Navigationslinks in eine Spalte */
+        align-items: center; /* Zentrieren Sie die Navigationslinks horizontal */
+        height: auto; /* Ändern Sie die Höhe der Navigationsleiste automatisch */
+    }
+
+    .nextpage-content {
+        flex-direction: column; /* Ändern Sie die Anordnung des Inhalts der nächsten Seite in eine Spalte */
+        align-items: center; /* Zentrieren Sie den Inhalt der nächsten Seite horizontal */
+        margin-top: 1rem; /* Fügen Sie etwas Abstand oben hinzu */
+    }
+
+    .nextpage-content li {
+        margin-bottom: 0.5rem; /* Reduzieren Sie den Abstand zwischen den Elementen */
+    }
+
+    .education_icon {
+        margin-top: 1rem; /* Fügen Sie etwas Abstand oben hinzu */
+    }
+
+    .footer-block {
+        flex-direction: column; /* Ändern Sie die Anordnung der Footer-Elemente in eine Spalte */
+        align-items: center; /* Zentrieren Sie die Footer-Elemente horizontal */
+    }
+}
+
+/* CSS für Bildschirme mit einer maximalen Breite von 480px (Smartphones) */
+@media only screen and (max-width: 480px) {
+    section {
+        margin: 0 2rem; /* Reduzieren Sie den horizontalen Abstand der Abschnitte */
+    }
+
+    .title {
+        font-size: 2rem; /* Reduzieren Sie die Schriftgröße der Titel auf kleineren Bildschirmen */
+    }
+
+    .pic-container img {
+        width: 100px; /* Verringern Sie die Größe der Bilder in der Bildergalerie */
+    }
+
+    .footer-block {
+        gap: 1rem; /* Reduzieren Sie den Abstand zwischen den Footer-Elementen */
     }
 }
