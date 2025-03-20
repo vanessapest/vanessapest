@@ -1,102 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="mediaqueries.css"/>
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <nav id="desktop-nav">
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="#projects" id="projects">Projects</a></li>
-                </ul>
-            </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()" >About</a></li>
-                    <li><a href="education.html" onclick="toggleMenu()" >Education</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()" >Projects</a></li>
-                </div>
-            </div>
-        </nav>
-        <section id="profile">
-            <img src="pics/Ribbon.jpg" alt="Hintergrundbild für Hero-Sektion">
-            <div class="section_text">
-                <h1 class="title">Vanessa Pest</h1>
-                <p class="section_text_p1">Portfolio</p>
-            </div>
-        </section>
-        <section id="about">
-            <p class="section_text_p2">few words</p>
-            <h1 class="title">About Me</h1>
-            <div class="section-container">
-                <div class="text-container">
-                    <p>Currently in my third semester at HTW Berlin - University of Applied Science, where I am pursuing a degree in media and computing. I am known for having a strong work ethic and constantly aiming for academic success. Despite my natural shyness, I have the ability to take on leadership roles when necessary, showcasing great communication abilities and a talent for mentoring others. With my enthusiasm and dedication to my goals, I am optimistic that I will have a big influence on the media and computer industries.</p>
-                    <div class="pic-container">
-                        <img src="pics/1.jpg" alt="Image 1"/>
-                        <img src="pics/2.jpg" alt="Image 2"/>
-                        <img src="pics/3.jpg" alt="Image 3"/>
-                        <img src="pics/4.jpg" alt="Image 4"/>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="image-container">
-                    <p class="open-image">Mood Board</p>
-                    <img src="pics/mood.jpg" alt="Moodboard" class="hidden-image">
-                </div>
-            </div>
-            <div class="container">
-                <div class="image-container">
-                    <p class="open-image">Inspiration Board</p>
-                    <img src="pics/inspiration.jpg" alt="Inspiration Board" class="hidden-image">
-                </div>
-            </div>                      
-            <div class="nextpage">
-                <div class="nextpage-content">
-                    <li><a href="education.html">visit my next Page</a></li>
-                    <img src="pics/education.png" alt="education icon" class="education_icon" onclick="location.href='education.html'">
-                </div>
-            </div>            
-        </section>
-        <footer id="footer">
-            <div class="footer-content">
-                <div class="footer-block">
-                    <div class="footer-item">
-                        <h2 class="footer-item-heading">Connect</h2>
-                        <ul class="footer-item-details">
-                            <li><a onclick="location.href='mailto:Vanessa.Pest@Student.HTW-Berlin.de'">Email</a></li>
-                            <li><a href="https://www.linkedin.com/in/vanessa-pest/">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-item">
-                        <h2 class="footer-item-heading">Info</h2>
-                        <ul class="footer-item-details">
-                            <li><a onclick="window.open('./documents/CV_VanessaPest.pdf')">CV</a></li>
-                            <li><a onclick="window.open('./documents/Internationaler_Studiengang_Medieninformatik_BA.pdf')">Course</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-item">
-                        <h2 class="footer-item-heading">Social</h2>
-                        <ul class="footer-item-details">
-                            <li><a href="https://pin.it/5lFuBmNCw">Pinterest</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="tv-static"></div>
+  <div class="scanline"></div>
+  <div class="flicker"></div>
+  <div class="mouse-follower"></div>
+
+  <header>
+    <a href="index.html" class="logo">VANESSA PEST</a>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="vanessa.pest@web.de">vanessa.pest@web.de</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <button class="close-menu" aria-label="Close menu">×</button>
+    <nav>
+      <ul>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="vanessa.pest@web.de">vanessa.pest@web.de</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="home">
+    <div class="container">
+      <h1>International Media and Computing Undergraduate</h1>
+      <p>based in Berlin</p>
+      <div class="home-links">
+        <a href="work.html" class="home-link">View Projects →</a>
+        <a href="vanessa.pest@web.de" class="home-link">✉ vanessa.pest@web.de</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

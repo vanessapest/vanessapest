@@ -1,68 +1,74 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const closeMenu = document.querySelector('.close-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if (menuToggle && closeMenu && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".pic-container img");
+// Mouse Follower
+const mouseFollower = document.querySelector('.mouse-follower');
 
-    images.forEach(img => {
-        img.addEventListener("mouseenter", function() {
-            this.classList.add("zoom");
-        });
+if (mouseFollower) {
+  // Initialize mouse position variables
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let followerX = mouseX;
+  let followerY = mouseY;
+  let isMoving = false;
+  let timeout;
 
-        img.addEventListener("mouseleave", function() {
-            this.classList.remove("zoom");
-        });
-    });
-});
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    mouseFollower.style.opacity = '0.75';
+    isMoving = true;
+    
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      isMoving = false;
+    }, 100);
+  });
 
-// Warte auf das Laden des DOMs
-document.addEventListener("DOMContentLoaded", function() {
-    // Wähle das Element mit der ID 'projects' aus
-    var projectsNavItem = document.getElementById('projects');
+  document.addEventListener('mouseleave', () => {
+    mouseFollower.style.opacity = '0';
+  });
 
-    // Speichere den ursprünglichen Text des Links
-    var originalText = projectsNavItem.textContent;
+  document.addEventListener('mouseenter', () => {
+    mouseFollower.style.opacity = '0.75';
+  });
 
-    // Füge ein Event-Listener für das Mouseover-Ereignis hinzu
-    projectsNavItem.addEventListener('mouseover', function() {
-        // Ändere den Text auf 'Coming Soon' beim Mouseover
-        projectsNavItem.textContent = 'Coming Soon';
-    });
-
-    // Füge ein Event-Listener für das Mouseout-Ereignis hinzu
-    projectsNavItem.addEventListener('mouseout', function() {
-        // Setze den ursprünglichen Text zurück, wenn der Mauszeiger den Navigationspunkt verlässt
-        projectsNavItem.textContent = originalText;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const openImageWords = document.querySelectorAll(".open-image");
-    const images = document.querySelectorAll(".hidden-image");
-
-    openImageWords.forEach((openImageWord, index) => {
-        openImageWord.addEventListener("click", function() {
-            const currentImage = images[index];
-            if (currentImage.classList.contains("active")) {
-                currentImage.classList.remove("active");
-            } else {
-                images.forEach(img => img.classList.remove("active"));
-                currentImage.classList.add("active");
-            }
-            adjustImageSize();
-        });
-    });
-
-    function adjustImageSize() {
-        const activeImages = document.querySelectorAll(".hidden-image.active");
-        if (activeImages.length > 1) {
-            activeImages.forEach(img => img.style.width = "50%");
-        } else {
-            activeImages.forEach(img => img.style.width = "100%");
-        }
+  function updateFollower() {
+    // Calculate the distance between current follower position and mouse position
+    const dx = mouseX - followerX;
+    const dy = mouseY - followerY;
+    
+    // Move the follower a percentage of the distance
+    followerX += dx * 0.2;
+    followerY += dy * 0.2;
+    
+    // Apply transformations
+    mouseFollower.style.left = `${followerX}px`;
+    mouseFollower.style.top = `${followerY}px`;
+    
+    if (isMoving) {
+      mouseFollower.style.transform = 'translate(-50%, -50%) scale(0.75)';
+      mouseFollower.style.opacity = '0.5';
+    } else {
+      mouseFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+      mouseFollower.style.opacity = '0.75';
     }
-});
+    
+    requestAnimationFrame(updateFollower);
+  }
+  
+  updateFollower();
+}

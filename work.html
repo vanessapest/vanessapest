@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="tv-static"></div>
+  <div class="scanline"></div>
+  <div class="flicker"></div>
+  <div class="mouse-follower"></div>
+
+  <header>
+    <a href="index.html" class="logo">VANESSA PEST</a>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="work.html" class="active">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="vanessa.pest@web.de">vanessa.pest@web.de</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <button class="close-menu" aria-label="Close menu">×</button>
+    <nav>
+      <ul>
+        <li><a href="work.html" class="active">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="vanessa.pest@web.de">vanessa.pest@web.de</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="work-page">
+    <div class="container">
+      <h1>Work</h1>
+      
+      <div class="projects-grid">
+        <a href="project.html?id=sugarplum" class="project">
+          <div class="project-image">
+            <img src="https://placehold.co/600x800" alt="Sugarplum">
+          </div>
+          <div class="project-info">
+            <div>
+              <h2>Sugarplum</h2>
+              <p>Mobile Game</p>
+            </div>
+            <span class="year">2024/25</span>
+          </div>
+        </a>
+        
+        <a href="project.html?id=typewriter" class="project">
+          <div class="project-image">
+            <img src="images/render.png" alt="Typewriter">
+          </div>
+          <div class="project-info">
+            <div>
+              <h2>Typewriter</h2>
+              <p>3D-Graphic</p>
+            </div>
+            <span class="year">2024</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
