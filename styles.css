@@ -433,6 +433,28 @@
     height: auto;
   }
   
+  /* Video Styling */
+  .project-video {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+
+  .video-player {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    background-color: #000;
+  }
+
+  /* Optional: Add a responsive container for the video */
+  @media (min-width: 768px) {
+    .project-video {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
   /* TV Static Effect */
   .tv-static {
     position: fixed;
