@@ -5,7 +5,7 @@ const projectsData = {
       category: "Mobile Game",
       year: "2024/25",
       client: "Personal Project",
-      description: "Bake cakes, decorate them, and sell to happy customers. A cozy little bakery at your own pace.",
+      description: "Bake cakes, decorate them, and sell to happy customers. A cozy little bakery at your own pace.Still a work in progress – the video shows a small snippet.",
       images: [
         "https://placehold.co/800x1200"
       ]
@@ -18,7 +18,8 @@ const projectsData = {
       description: "A vintage Olympia typewriter sits on a wooden desk, mid-letter. A red flower, handwritten note, coffee cup, and warm lamp complete the cozy, nostalgic scene.",
       images: [
         "images/render.png"
-      ]
+      ],
+      video: "images/game1.now"
     }
   };
   
