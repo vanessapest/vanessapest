@@ -5,10 +5,8 @@ const projectsData = {
       category: "Mobile Game",
       year: "2024/25",
       client: "Personal Project",
-      description: "Simple mobile game.",
+      description: "Bake cakes, decorate them, and sell to happy customers. A cozy little bakery at your own pace.",
       images: [
-        "https://placehold.co/800x1200",
-        "https://placehold.co/1200x800",
         "https://placehold.co/800x1200"
       ]
     },
