@@ -7,7 +7,7 @@ const projectsData = {
       client: "Personal Project",
       description: "Bake cakes, decorate them, and sell to happy customers. A cozy little bakery at your own pace. Still a little work in progress – the video shows a small snippet.",
       images: [
-        "https://placehold.co/800x1200"
+        "images/Poster.png"
       ],
       video: "images/game1.mov" 
     },
