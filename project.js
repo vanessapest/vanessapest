@@ -46,7 +46,18 @@ const projectsData = {
       document.getElementById('project-category').textContent = project.category;
       document.getElementById('project-client').textContent = project.client;
 
-      // Load project video if available
+      // Load project images
+      const imagesContainer = document.getElementById('project-images');
+      imagesContainer.innerHTML = '';
+      
+      project.images.forEach(imageUrl => {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageUrl;
+        imgElement.alt = project.title;
+        imagesContainer.appendChild(imgElement);
+      });
+
+      // Load project video if available - AFTER images
       if (project.video) {
         const videoContainer = document.createElement('div');
         videoContainer.className = 'project-video';
@@ -58,26 +69,14 @@ const projectsData = {
         
         const source = document.createElement('source');
         source.src = project.video;
-        source.type = 'video/mp4'; 
+        source.type = 'video/quicktime'; // Changed to video/quicktime for .mov files
         
         videoElement.appendChild(source);
         videoContainer.appendChild(videoElement);
         
-        // Add video before images
-        const imagesContainer = document.getElementById('project-images');
-        imagesContainer.parentNode.insertBefore(videoContainer, imagesContainer);
+        // Add video AFTER images
+        imagesContainer.appendChild(videoContainer);
       }
-      
-      // Load project images
-      const imagesContainer = document.getElementById('project-images');
-      imagesContainer.innerHTML = '';
-      
-      project.images.forEach(imageUrl => {
-        const imgElement = document.createElement('img');
-        imgElement.src = imageUrl;
-        imgElement.alt = project.title;
-        imagesContainer.appendChild(imgElement);
-      });
     } else {
       // Redirect to work page if project not found
       window.location.href = 'work.html';
